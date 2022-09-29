@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3W67NC5WQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J3W67NC5WQ');
+</script>
+<meta charset="UTF-8">
+	<title>Virtual Try-On Hair Color</title>
+	<link rel="stylesheet" href="/static/css/index.css?v=1.4">
+	<link rel="stylesheet"  href="/static/css/reset.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+	<link type="text/css" rel="stylesheet" href="/static/js/Jcrop/JcropDoc/css/jquery.Jcrop.min.css"/>
+	
+	<!-- 반응형 웹 개발 할 때, 가로폭 조정을 하게하기 위해.. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 
+ 	Cache-Control
+ 		no-cache : 캐시를 사용하기 전에 재검증을 위한 요청을 강제함.
+ 		no-store : 클라이언트의 요청, 서버의 응답 등을 일체 저장하지 않음
+ 		must-revalidate : 캐시를 사용하기 전에 반드시 만료된 것인지 검증을 함.
+ 		Ex) Cache-Control: no-cache, no-store, must-revalidate
+ 	-->
+	
+	<!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, 
+	must-revalidate">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache"> -->
+</head>
+<body>
+
+<section id="contents">
+	<div id="contentsWrap">
+		<div id="contentsTitle">
+			<div id="contentsTitleContainer">
+				<h1 class="title">Virtual Try-On Hair Color</h1>
+				<p class="sub_title">
+				Experiment with the latest hair colors and styling trends. 
+				Let's try on at once!
+				</p>
+				
+			
+			</div><!-- contentsTitleContainer ends here -->
+		</div><!-- contents_title ends here -->
+		
+		<div id="contentsMenu">
+			<div id="contentsMenuContainer">
+				<div class="menu_element" id="menuOne">
+					Hair style (coming soon)
+				</div><!-- menu_element ends here -->
+				<div class="menu_element" id="menuTwo">
+					HAIR COLOR
+				</div><!-- menu_element ends here -->
+			</div><!-- contentsMenuContainer ends here -->
+		</div><!-- contents_menu ends here-->
+		
+		<div id="contentsOne">
+			<div id="contentOneContainer">
+				<div id="colorBtnListContainer">
+					<div id="rightArr" class="arrow">
+						<i class="fas fa-caret-right"></i>
+					</div><!-- RightArr ends here -->
+					<div id="leftArr" class="arrow">
+						<i class="fas fa-caret-left"></i>
+					</div><!-- leftArr -->
+					<ul id="imgBtnList">
+						<li>
+							<img src="/static/data/sample01.png" imgType="sample" class="on"/>
+						</li>
+						<li>
+							<img src="/static/data/sample02.png" imgType="sample"/>
+						</li>
+						<li>
+							<img src="/static/data/sample03.png" imgType="sample"/>
+						</li>
+						<li>
+							<img src="/static/data/sample04.png" imgType="sample"/>
+						</li>
+						<li>
+							<img src="/static/data/sample05.png" imgType="sample"/>
+						</li>
+						<li>
+							<img src="/static/data/sample06.png" imgType="sample"/>
+						</li>
+					</ul><!-- imgBtn -->
+				</div><!-- colorBtnList ends here -->
+				<div id="imgContainer">
+					<div id="imgBox" display_mode="full">
+						
+						<i class="fas fa-upload"></i>
+						
+						<!-- <i class="fas fa-star-half-alt"></i> -->
+						<i class="far fa-times-circle"></i>
+						<a id="downLink" href="/static/data/sample01.png" download>
+							<i class="fas fa-download"></i>
+						</a>
+						<div id="slideImg">
+							<img src="/static/img/sample01.png">
+						</div>
+						<span id="slideBar"></span>
+						<img id="DyedImg" imgType="sample" src="/static/data/sample01.png" alt="색상을 선택하면 머리에 색이 적용됩니다"/>
+						<img id="loadDyedImg" src="/static/img/loading.gif">
+						<div id="progressBarWrap">
+							<p id="progressBar">
+
+							</p>
+						</div>
+						<div id="progressMsgBar">
+							
+						</div>
+						<button id="stopAjaxBtn">cancel</button>
+						<div id="imgUploadBtn">
+							<i class="far fa-times-circle"></i>
+							<div id="checkBoxCon">
+								<p>The picture you uploaded will be saved in our server.</p>
+								<input id="checkBox" type="checkBox">
+								<label for="checkBox">Agree</label>
+							</div>
+							<label for="imgFile">
+								<i class="fas fa-upload"></i>
+								upload picture
+							</label>
+							<input id="imgFile" type="file"/>
+						</div>
+						<!-- imgUploadBtn ends -->
+					</div>
+				</div><!-- imgContainer ends here -->
+				<!-- <div id="originalImgContainer">
+					<div id="originImgWrap">
+						<div id="originImgBox">
+							<img id="loadImg" src="/static/img/loading.gif">
+							<img id="originImg" imgType="sample" src="/static/sample_images/sample01.png" />
+						</div>
+					</div> 
+				</div> --><!-- originalImgContainer -->
+				<div id="colorList">
+					<div id="colorListContainer">
+						<label for="red">
+							<p>red</p>
+							<img src="/static/img/btn_red.png" />
+						</label>
+						<input id="red" value='0' type="radio" name="colorSelect">
+								
+						<label for="yellow">
+							<p>yellow</p>
+							<img src="/static/img/btn_yellow.png" />
+						</label>
+						<input id="yellow" value="20" type="radio" name="colorSelect">
+
+						<label for="green">
+							<p>green</p>
+							<img src="/static/img/btn_green.png" />
+						</label>
+						<input id="green" value="60" type="radio" name="colorSelect">
+								
+						<label for="light-blue">
+							<p>light-blue</p>
+							<img src="/static/img/btn_sky.png" />
+						</label>
+						<input id="light-blue" value="90" type="radio" name="colorSelect">
+								
+						<label for="blue">
+							<p>blue</p>
+							<img src="/static/img/btn_blue.png" />
+						</label>
+						<input id="blue" value="120" type="radio" name="colorSelect">
+									
+						<label for="purple">
+							<p>purple</p>
+							<img src="/static/img/btn_purple.png" />
+						</label>
+						<input id="purple" value="150" type="radio" name="colorSelect">
+						<label for="black">
+							<p>black</p>
+							<img src="/static/img/btn_black.png" />
+						</label>
+						<input id="black" value="6" type="radio" name="colorSelect">
+					</div><!-- colorListContainer ends here -->
+					<!-- <div id="colorThicknessSelectBox">
+						<div id="colorThicknessSelectWrap">
+							<div>
+								<label for="normal">일반톤</label>
+								<input id="normal" type="radio" name="colorThickness" value="0"/>
+							</div>
+							<div>
+								<label for="light">옅은톤</label>
+								<input id="light" type="radio" name="colorThickness" value="1"/>
+							</div>
+							<div>
+								<label for="thick">진한톤</label>
+								<input id="thick" type="radio" name="colorThickness" value="2"/>
+							</div>
+						</div>
+					</div> --><!-- colorThicknessSelectBox ends here -->
+				</div>
+			</div><!-- contentsOneContainer ends here -->
+		</div><!-- contentsOne ends here -->
+	</div><!-- contentsWrap ends here -->
+	<!-- jcrop 임시요소 -->
+	<div id = "jcropImg">
+		<!-- <i class="far fa-times-circle"></i> -->
+		<div id="imgWrap">
+			<i class="fas fa-undo-alt"></i>
+			<img id="editImg" src="#">
+			<button id="cutBtn">
+				<i class="fas fa-check"></i>
+			</button>
+
+			<button id="plusBtn" class="resize_btn">
+				<i class="far fa-plus-square"></i>
+			</button>
+			
+			<button id="minusBtn" class="resize_btn">
+				<i class="far fa-minus-square"></i>
+			</button>
+
+		</div>
+
+		<input type="hidden" id="xAxis" value="0" placeholder="선택영여역의_x좌표"/>
+
+		<input type="hidden" id="yAxis" value="0" placeholder="선택영여역의_y좌표"/>
+
+		<input type="hidden" id="wLength" value="0" placeholder="선택영여역의_w넓이"/>
+
+		<input type="hidden" id="hLength" value="0" placeholder="선택영여역의_h높이"/>
+	</div>
+
+</section><!-- contents ends here -->
+
+
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/Jcrop/JcropDoc/js/jquery.Jcrop.min.js"></script>
+<!-- tensorflow.js 로드하는 코드... -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>s
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+functions/
+static/logs/
+*.py
+*.sh
+*.yaml
